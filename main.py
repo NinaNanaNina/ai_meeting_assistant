@@ -102,7 +102,7 @@ def create_meeting(email, start, end, attendees):
 # Function: Send confirmation email
 def send_email(to, subject, content):
     try:
-        yag = yagmail.SMTP("niinaa.aalami@gmail.com", "UYGULAMA_ŞİFRESİ")  # ← Buraya App Password gelecek!
+        yag = yagmail.SMTP("your email", "App password")  # ← Buraya App Password gelecek!
         yag.send(to=to, subject=subject, contents=content)
     except Exception as e:
         print("❌ Email sending failed:", e)
